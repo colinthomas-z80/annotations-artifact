@@ -1,0 +1,62 @@
+# taskvine taskgraph version 2
+# TASK taskid "program" INPUTS fileid1 fileid fileid3 ... OUTPUTS fileid4 fileid5 ...
+# FILE fileid "source" size
+FILE file-meta-14765cac8c27f11eb643dfdc810d075d "region.hdr" 292
+FILE temp-rnd-mymtnjoqrzqygbz "temp" 0
+FILE file-meta-fd16085ae0cf13644f886d5b9bdb382b "raw_j" 24576
+FILE temp-rnd-iomdzjocjmribgm "temp" 0
+FILE temp-rnd-elpajbcbddfmaqj "temp" 0
+FILE temp-rnd-tioidvdreqkkgkd "temp" 0
+FILE temp-rnd-yayqtjecknetuhl "temp" 0
+FILE temp-rnd-abvepkrdlpcegnh "temp" 0
+FILE temp-rnd-mzozfmupjtcvunh "temp" 0
+FILE temp-rnd-bqjzgluaxzwsaky "temp" 0
+FILE file-meta-5888ad670d089116a25482d0d608aa3a "jband.fits" 414780480
+FILE temp-rnd-sxputstnfeodrjr "temp" 0
+FILE file-meta-9154198461e3d0258d244318c01ee398 "raw_k" 24576
+FILE temp-rnd-alqyvuihxabzugc "temp" 0
+FILE temp-rnd-ceqcmjpqkwsngxa "temp" 0
+FILE temp-rnd-fhcrqhguqnkosbv "temp" 0
+FILE temp-rnd-ymaruoyekdgcjjw "temp" 0
+FILE temp-rnd-qtjfhvipemzdqsd "temp" 0
+FILE temp-rnd-vbaikmmltemrrxw "temp" 0
+FILE temp-rnd-dkrmjawmqgyhdll "temp" 0
+FILE file-meta-b37a0438552649d19598b6be6f06bb6d "kband.fits" 414780480
+FILE temp-rnd-ptlcjanilpbdxuc "temp" 0
+FILE file-meta-eb6e9be35f2bfee6eef3a8864f607890 "raw_h" 24576
+FILE temp-rnd-ttbhnxcfkrjixqs "temp" 0
+FILE temp-rnd-rvedsqzcenvkfgv "temp" 0
+FILE temp-rnd-nqyflppaumevizf "temp" 0
+FILE temp-rnd-rozazbyrllblkgh "temp" 0
+FILE temp-rnd-akuhkfnyexmzktf "temp" 0
+FILE temp-rnd-tglkgihrtxaxvqk "temp" 0
+FILE temp-rnd-ungzqaemkxbdzio "temp" 0
+FILE file-meta-f8b5bbed2dc3ec05da4a6d1112b1632d "hband.fits" 414780480
+TASK T19 "mImgtbl" INPUTS file-meta-eb6e9be35f2bfee6eef3a8864f607890 OUTPUTS temp-rnd-ptlcjanilpbdxuc 
+TASK T10 "mImgtbl" INPUTS file-meta-9154198461e3d0258d244318c01ee398 OUTPUTS temp-rnd-sxputstnfeodrjr 
+TASK T20 "mkdir" INPUTS file-meta-eb6e9be35f2bfee6eef3a8864f607890 temp-rnd-ptlcjanilpbdxuc file-meta-14765cac8c27f11eb643dfdc810d075d OUTPUTS temp-rnd-ttbhnxcfkrjixqs 
+TASK T11 "mkdir" INPUTS file-meta-9154198461e3d0258d244318c01ee398 temp-rnd-sxputstnfeodrjr file-meta-14765cac8c27f11eb643dfdc810d075d OUTPUTS temp-rnd-alqyvuihxabzugc 
+TASK T21 "mImgtbl" INPUTS temp-rnd-ttbhnxcfkrjixqs OUTPUTS temp-rnd-rvedsqzcenvkfgv 
+TASK T22 "mOverlaps" INPUTS temp-rnd-rvedsqzcenvkfgv OUTPUTS temp-rnd-nqyflppaumevizf 
+TASK T12 "mImgtbl" INPUTS temp-rnd-alqyvuihxabzugc OUTPUTS temp-rnd-ceqcmjpqkwsngxa 
+TASK T13 "mOverlaps" INPUTS temp-rnd-ceqcmjpqkwsngxa OUTPUTS temp-rnd-fhcrqhguqnkosbv 
+TASK T1 "mImgtbl" INPUTS file-meta-fd16085ae0cf13644f886d5b9bdb382b OUTPUTS temp-rnd-mymtnjoqrzqygbz 
+TASK T23 "mkdir" INPUTS temp-rnd-ttbhnxcfkrjixqs temp-rnd-nqyflppaumevizf file-meta-14765cac8c27f11eb643dfdc810d075d OUTPUTS temp-rnd-rozazbyrllblkgh 
+TASK T24 "mBgModel" INPUTS temp-rnd-rvedsqzcenvkfgv temp-rnd-rozazbyrllblkgh OUTPUTS temp-rnd-akuhkfnyexmzktf 
+TASK T25 "mkdir" INPUTS temp-rnd-ttbhnxcfkrjixqs temp-rnd-rvedsqzcenvkfgv temp-rnd-akuhkfnyexmzktf OUTPUTS temp-rnd-tglkgihrtxaxvqk 
+TASK T26 "mImgtbl" INPUTS temp-rnd-tglkgihrtxaxvqk OUTPUTS temp-rnd-ungzqaemkxbdzio 
+TASK T14 "mkdir" INPUTS temp-rnd-alqyvuihxabzugc temp-rnd-fhcrqhguqnkosbv file-meta-14765cac8c27f11eb643dfdc810d075d OUTPUTS temp-rnd-ymaruoyekdgcjjw 
+TASK T15 "mBgModel" INPUTS temp-rnd-ceqcmjpqkwsngxa temp-rnd-ymaruoyekdgcjjw OUTPUTS temp-rnd-qtjfhvipemzdqsd 
+TASK T27 "mAdd" INPUTS temp-rnd-tglkgihrtxaxvqk temp-rnd-ungzqaemkxbdzio file-meta-14765cac8c27f11eb643dfdc810d075d OUTPUTS file-meta-f8b5bbed2dc3ec05da4a6d1112b1632d 
+TASK T16 "mkdir" INPUTS temp-rnd-alqyvuihxabzugc temp-rnd-ceqcmjpqkwsngxa temp-rnd-qtjfhvipemzdqsd OUTPUTS temp-rnd-vbaikmmltemrrxw 
+TASK T17 "mImgtbl" INPUTS temp-rnd-vbaikmmltemrrxw OUTPUTS temp-rnd-dkrmjawmqgyhdll 
+TASK T18 "mAdd" INPUTS temp-rnd-vbaikmmltemrrxw temp-rnd-dkrmjawmqgyhdll file-meta-14765cac8c27f11eb643dfdc810d075d OUTPUTS file-meta-b37a0438552649d19598b6be6f06bb6d 
+TASK T2 "mkdir" INPUTS file-meta-fd16085ae0cf13644f886d5b9bdb382b temp-rnd-mymtnjoqrzqygbz file-meta-14765cac8c27f11eb643dfdc810d075d OUTPUTS temp-rnd-iomdzjocjmribgm 
+TASK T3 "mImgtbl" INPUTS temp-rnd-iomdzjocjmribgm OUTPUTS temp-rnd-elpajbcbddfmaqj 
+TASK T4 "mOverlaps" INPUTS temp-rnd-elpajbcbddfmaqj OUTPUTS temp-rnd-tioidvdreqkkgkd 
+TASK T5 "mkdir" INPUTS temp-rnd-iomdzjocjmribgm temp-rnd-tioidvdreqkkgkd file-meta-14765cac8c27f11eb643dfdc810d075d OUTPUTS temp-rnd-yayqtjecknetuhl 
+TASK T6 "mBgModel" INPUTS temp-rnd-elpajbcbddfmaqj temp-rnd-yayqtjecknetuhl OUTPUTS temp-rnd-abvepkrdlpcegnh 
+TASK T7 "mkdir" INPUTS temp-rnd-iomdzjocjmribgm temp-rnd-elpajbcbddfmaqj temp-rnd-abvepkrdlpcegnh OUTPUTS temp-rnd-mzozfmupjtcvunh 
+TASK T8 "mImgtbl" INPUTS temp-rnd-mzozfmupjtcvunh OUTPUTS temp-rnd-bqjzgluaxzwsaky 
+TASK T9 "mAdd" INPUTS temp-rnd-mzozfmupjtcvunh temp-rnd-bqjzgluaxzwsaky file-meta-14765cac8c27f11eb643dfdc810d075d OUTPUTS file-meta-5888ad670d089116a25482d0d608aa3a 
+# end

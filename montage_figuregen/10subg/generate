@@ -1,0 +1,2 @@
+python storage_consumption.py montage_figuregen/10subg/9_22_montage_base_mproj_10subg_10w_run/csv-files/worker_storage_consumption.csv montage_figuregen/10subg/9_22_montage_semantic_mproj_10subg_10w_run/csv-files/worker_storage_consumption.csv --subtract-subgraph montage_figuregen/10subg/tids montage_figuregen/10subg/9_22_montage_base_mproj_10subg_10w_run/vine-logs/debug montage_figuregen/10subg/tids montage_figuregen/10subg/9_22_montage_semantic_mproj_10subg_10w_run/vine-logs/debug --subgraph-storage-size 1200 --labels base semantic ; xdg-open storage_consumption.png 
+

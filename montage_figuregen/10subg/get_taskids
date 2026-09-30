@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cat $1 | grep "mAdd" | grep -Eo "T[0-9]+" | sed 's/T//'
+
