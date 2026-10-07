@@ -1,0 +1,18 @@
+key,value
+total_workers,10
+total_tasks,1803
+total_library_tasks,0
+total_all_tasks,1803
+task_status_counts,"{""0"": 1800, ""104"": 3}"
+successful_tasks,1800
+unsuccessful_tasks,3
+recovery_tasks,0
+dispatched_tasks,1803
+undispatched_tasks,0
+failed_tasks,3
+recovery_successful,0
+recovery_unsuccessful,0
+total_files,5273
+manager_start_time,1791391644.51
+manager_end_time,1791391833.06
+manager_duration,188.54999995231628
