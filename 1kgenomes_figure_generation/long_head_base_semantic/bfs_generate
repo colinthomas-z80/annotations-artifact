@@ -1,4 +1,4 @@
-python storage_consumption.py base_consumption.csv 10_7_genomes_bfs_baserun/csv-files/worker_storage_consumption.csv semantic_consumption.csv --subtract-subgraph tids_genomes_freq 9_15_genomes_base_10chr_10indiv_hungry5fac1_r1/vine-logs/debug tids_genomes_freq 10_7_genomes_bfs_baserun/vine-logs/debug tids_genomes_freq 9_15_genomes_semantic_10chr_10indiv_hungry5fac1_r1/vine-logs/debug --subgraph-storage-size 1300 --labels dfs bfs semantic
+python storage_consumption_updated.py base_consumption.csv 10_7_genomes_bfs_baserun/csv-files/worker_storage_consumption.csv semantic_consumption.csv --subtract-subgraph tids_genomes_freq 9_15_genomes_base_10chr_10indiv_hungry5fac1_r1/vine-logs/debug tids_genomes_freq 10_7_genomes_bfs_baserun/vine-logs/debug tids_genomes_freq 9_15_genomes_semantic_10chr_10indiv_hungry5fac1_r1/vine-logs/debug --subgraph-storage-size 1300 --labels dfs bfs semantic
 
 
 python result_frequency.py 3 9_15_genomes_base_10chr_10indiv_hungry5fac1_r1/vine-logs/transactions 10_7_genomes_bfs_baserun/vine-logs/transactions 9_15_genomes_semantic_10chr_10indiv_hungry5fac1_r1/vine-logs/transactions dfs bfs semantic --subgraphs
